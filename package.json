@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "predeploy": "npm run check-git-status && npm run generate-version && firebase deploy",
+    "check-git-status": "git diff-index --quiet HEAD -- || (echo 'Uncommitted changes detected. Please commit before building.' && exit 1)"
   },
   "dependencies": {
     "@emotion/react": "^11.13.5",
