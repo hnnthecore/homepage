@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./HeroSection.css";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 
 // Assumes particles.js and stats.js are loaded globally (via script tags in index.html)
 
@@ -11,10 +11,10 @@ export default function HeroSection2() {
       window.particlesJS("particles-js", {
         particles: {
           number: {
-            value: 380,
+            value: 150,
             density: {
               enable: true,
-              value_area: 800,
+              value_area: 600,
             },
           },
           color: {
@@ -47,7 +47,7 @@ export default function HeroSection2() {
           },
           move: {
             enable: true,
-            speed: 6,
+            speed: 3,
             direction: "none",
             random: false,
             straight: false,
@@ -132,10 +132,30 @@ export default function HeroSection2() {
           textAlign: "center",
         }}
       >
-        <Typography variant="h2" sx={{ fontWeight: 600, marginBottom: 2 }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: 600,
+            marginBottom: 1,
+            marginTop: "-30px",
+            fontSize: { xs: "28px", md: "45px" },
+          }}
+        >
           Hi, I'm Gurdeep 👋
         </Typography>
-        <Typography variant="h5">I really like Networking</Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 400,
+            marginBottom: 3,
+            fontSize: { xs: "14px", md: "25px" },
+          }}
+        >
+          I really like networks!
+        </Typography>
+        <Button variant="contained" sx={{ backgroundColor: "#00f0ff" }}>
+          Download CV
+        </Button>
       </Box>
     </Box>
   );
