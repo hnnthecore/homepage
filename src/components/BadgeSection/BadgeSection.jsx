@@ -7,6 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import { Link } from "@mui/material";
+import myimage from "../../assets/react.svg";
 
 function BadgeSection() {
   const certifications = [
@@ -15,7 +16,7 @@ function BadgeSection() {
       name: "CompTIA A+",
       provider: "CompTIA",
       imageUrl:
-        "https://images.credly.com/size/340x340/images/63482325-a0d6-4f64-ae75-f5f33922c7d0/CompTIA_A_2Bce.png",
+        "https://images.credly.com/size/340x340/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob",
       id: "cert-2024-comptia-a-plus",
       url: "https://www.credly.com/badges/c57982df-e42e-46f1-b37d-e2e8d17c88fa/public_url",
     },
@@ -24,7 +25,7 @@ function BadgeSection() {
       name: "CompTIA ITF+",
       provider: "CompTIA",
       imageUrl:
-        "https://images.credly.com/size/340x340/images/5e719e46-faf2-40c9-ad49-3b11e6e6cb34/image.png",
+        "https://images.credly.com/size/340x340/images/a49be93a-34ff-4224-996c-b2c976a5dc9d/blob",
       id: "cert-2024-comptia-itf-plus",
       url: "",
     },
@@ -51,7 +52,7 @@ function BadgeSection() {
       name: "Certified Ethical Hacker",
       provider: "EC-Council",
       imageUrl:
-        "https://images.credly.com/size/340x340/images/8170ce74-d9e7-410a-9647-4aec58d2ba9d/59d3f2fde5f547a5a44f5d7deddeb10d-01.png",
+        "https://aspen.eccouncil.org/Content/Badges/TrainedBadges/CEH_9582F3793CA1.png",
       id: "cert-2023-ceh",
       url: "",
     },
@@ -59,9 +60,7 @@ function BadgeSection() {
       year: 2023,
       name: "CompTIA Security+",
       provider: "CompTIA",
-      imageUrl:
-        "https://images.credly.com/size/340x340/images/74790a75-8451-400a-8536-92d792c5184a/CompTIA_Security_2Bce.png",
-      id: "cert-2023-comptia-security-plus",
+      imageUrl: "./security_plus.png",
       url: "",
     },
   ];
@@ -77,7 +76,7 @@ function BadgeSection() {
           alignItems: "center",
           padding: "2rem 2rem 1.5rem 2rem",
           gap: 3,
-          marginTop: "5rem",
+          marginTop: "5px",
           marginBottom: "5rem",
         }}
       >
