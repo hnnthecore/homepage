@@ -2,4 +2,9 @@
 ## Links 
 - [developer-portfolios](https://github.com/emmabostian/developer-portfolios)
 
-### Hello!
+## TODO 
+- contact formular (email.js)
+- navbar
+- skills
+- like count! (mit firebase DB)
+

@@ -15,10 +15,10 @@ function Footer() {
       }}
     >
       <Typography variant="body2" component="p">
-        © {new Date().getFullYear()} Itswisskumar.ch All rights reserved.
+        © {new Date().getFullYear()} hannythecore.ch All rights reserved.
       </Typography>
       <Typography variant="body2" component="p" sx={{ mt: 1 }}>
-        Designed with love using Material-UI.
+        Designed with ❤︎ using MaterialUI.
       </Typography>
     </Box>
   );

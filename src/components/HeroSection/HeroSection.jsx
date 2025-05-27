@@ -5,6 +5,16 @@ import { Box, Typography, Button } from "@mui/material";
 // Assumes particles.js and stats.js are loaded globally (via script tags in index.html)
 
 export default function HeroSection2() {
+  function downloadCV() {
+    const link = document.createElement("a");
+    link.href =
+      "https://raw.githubusercontent.com/hnnthecore/cv-latex/main/Lebenslauf_Gurdeep_Kumar.pdf";
+    link.download = "Lebenslauf_Gurdeep_Kumar.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   useEffect(() => {
     // Init particles.js
     if (window.particlesJS) {
@@ -51,7 +61,7 @@ export default function HeroSection2() {
             direction: "none",
             random: false,
             straight: false,
-            out_mode: "out",
+            out_mode: "bounce",
             bounce: false,
           },
         },
@@ -138,22 +148,32 @@ export default function HeroSection2() {
             fontWeight: 600,
             marginBottom: 1,
             marginTop: "-30px",
-            fontSize: { xs: "28px", md: "45px" },
+            fontSize: { xs: "32px", md: "55px" },
           }}
         >
-          Hi, I'm Gurdeep 👋
+          Hi, I'm Gurdeep👋
         </Typography>
         <Typography
           variant="h5"
           sx={{
             fontWeight: 400,
             marginBottom: 3,
-            fontSize: { xs: "14px", md: "25px" },
+            fontSize: { xs: "18px", md: "25px" },
           }}
         >
-          I really like networks!
+          I really like networks.
         </Typography>
-        <Button variant="contained" sx={{ backgroundColor: "#00f0ff" }}>
+        <Button
+          size="large"
+          onClick={() => downloadCV()}
+          variant="contained"
+          sx={{
+            backgroundColor: "#00d8e6",
+            color: "white",
+            mt: 2,
+            fontWeight: 700,
+          }}
+        >
           Download CV
         </Button>
       </Box>

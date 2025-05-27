@@ -1,13 +1,9 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import { Link } from "@mui/material";
-import myimage from "../../assets/react.svg";
 
 function BadgeSection() {
   const certifications = [
@@ -71,62 +67,77 @@ function BadgeSection() {
         sx={{
           height: "fit-content",
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding: "2rem 2rem 1.5rem 2rem",
-          gap: 3,
-          marginTop: "5px",
-          marginBottom: "5rem",
+          padding: "1rem",
+          marginTop: "8rem",
+          marginBottom: "7rem",
         }}
       >
-        {certifications.map((cert, index) => (
-          <Link
-            index={index}
-            href={cert.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ textDecoration: "none" }}
-          >
-            <Card
-              sx={{
-                width: { xs: "60vw", md: 215 },
-                height: 280, // Set consistent height
-                textAlign: "center",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                alignItems: "center",
-                borderRadius: 1,
-                boxShadow:
-                  "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
-              }}
+        <Typography variant="h4" color="white" sx={{ fontWeight: 700 }}>
+          Certifications
+        </Typography>
+        <Box
+          sx={{
+            height: "fit-content",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "2rem 2rem 1.5rem 2rem",
+            gap: 3,
+            marginTop: "1rem",
+          }}
+        >
+          {certifications.map((cert, index) => (
+            <Link
+              index={index}
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ textDecoration: "none" }}
             >
-              <CardMedia
-                component="img"
-                height="140"
-                image={cert.imageUrl}
-                alt="badge"
+              <Card
                 sx={{
-                  objectFit: "contain",
-                  backgroundColor: "transparent",
-                  padding: "1rem",
+                  width: { xs: "60vw", md: 220 },
+                  height: 290, // Set consistent height
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  borderRadius: 1,
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
                 }}
-              />
-              <CardContent>
-                <Typography variant="h5" gutterBottom>
-                  {cert.name}
-                </Typography>
-                <Typography
-                  component="div"
-                  sx={{ color: "text.secondary", fontSize: 14 }}
-                >
-                  Issued by {cert.provider}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
+              >
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={cert.imageUrl}
+                  alt="badge"
+                  sx={{
+                    objectFit: "contain",
+                    backgroundColor: "transparent",
+                    padding: "1rem",
+                  }}
+                />
+                <CardContent>
+                  <Typography variant="h5" gutterBottom>
+                    {cert.name}
+                  </Typography>
+                  <Typography
+                    component="div"
+                    sx={{ color: "text.secondary", fontSize: 14 }}
+                  >
+                    Issued by {cert.provider}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </Box>
       </Box>
     </>
   );
