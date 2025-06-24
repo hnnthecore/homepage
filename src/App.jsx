@@ -5,6 +5,7 @@ import ContactSection from "./components/ContactSection/ContactSection";
 import HeroSection from "./components/HeroSection/HeroSection";
 import { Box } from "@mui/material";
 import NavBar from "./components/NavBar/NavBar";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <HeroSection />
       </Box>
       <BadgeSection />
+      <ContactForm />
       <ContactSection />
       <Footer />
     </>

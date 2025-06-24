@@ -3,8 +3,9 @@
 - [developer-portfolios](https://github.com/emmabostian/developer-portfolios)
 
 ## TODO 
-- contact formular (email.js)
-- navbar
-- skills
-- like count! (mit firebase DB)
-
+- [x] contact formular (email.js) 
+- [ ] navbar
+- [ ] skills
+- [ ] like count! (mit firebase DB)
+- [ ] Homelab NEXT
+- [ ] aboutme NEXT
